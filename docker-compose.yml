@@ -1,0 +1,13 @@
+cassandra:
+    image: mashape/cassandra
+    ports:
+    - 9042:9042
+
+kong:
+    image: mashape/kong
+    links:
+    - "cassandra"
+    ports:
+    - 8000:8000
+    - 8001:8001
+
