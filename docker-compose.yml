@@ -4,7 +4,7 @@ cassandra:
     - 9042:9042
 
 kong:
-    image: mashape/kong
+    image: daocloud.io/koolay/kong
     links:
     - "cassandra"
     ports:
