@@ -1,9 +1,11 @@
 FROM mhart/alpine-node
 MAINTAINER koolay
 
+ENV DASHBOARD_VERSION 1.1.2
+
 RUN mkdir /data && cd /data \
-    && git clone https://github.com/PGBI/kong-dashboard.git ./ \
-    && rm -rdf .git/
+    && wget https://github.com/PGBI/kong-dashboard/archive/v{$DASHBOARD_VERSION}.tar.gz && tar -xf  v{$DASHBOARD_VERSION }.tar.gz \
+    && cd kong-dashboard-{$DASHBOARD_VERSION } && rm -rf archive/v{$DASHBOARD_VERSION }.tar.gz \
 
 WORKDIR /data
 
