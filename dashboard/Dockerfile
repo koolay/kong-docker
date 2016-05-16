@@ -4,7 +4,7 @@ MAINTAINER koolay
 ENV DASHBOARD_VERSION 1.1.2
 
 RUN mkdir /data && cd /data \
-    && wget https://github.com/PGBI/kong-dashboard/archive/v{$DASHBOARD_VERSION}.tar.gz && tar -xf  v{$DASHBOARD_VERSION }.tar.gz \
+    && wget http://github.com/PGBI/kong-dashboard/archive/v{$DASHBOARD_VERSION}.tar.gz && tar -xf  v{$DASHBOARD_VERSION }.tar.gz \
     && cd kong-dashboard-{$DASHBOARD_VERSION } && rm -rf archive/v{$DASHBOARD_VERSION }.tar.gz \
 
 WORKDIR /data
