@@ -1,6 +1,6 @@
 FROM phusion/baseimage
 MAINTAINER KOOLAY
-ENV KONG_VERSION 0.5.3
+ENV KONG_VERSION 0.8.1
 
 RUN apt-get update
 RUN apt-get install -y netcat lua5.1 openssl libpcre3 dnsmasq wget \
