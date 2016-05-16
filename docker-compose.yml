@@ -20,3 +20,9 @@ kong:
     - 7946:7946
     - 7946:7946/udp
 
+dashboard:
+    image: pgbi/kong-dashboard
+    ports:
+    - 8080:8080
+
+
